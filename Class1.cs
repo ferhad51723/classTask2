@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    interface IAnimal
+    interface IWorkable
     {
-        void MakeSound();
-        void Move();
+        void Work();
     }
 
-    interface IVehicle
+    interface IReportable
     {
-        void Start();
-        void Stop();
+        void GenerateReport(string str);
+        void ShowReport();
     }
 }
