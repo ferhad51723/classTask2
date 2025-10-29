@@ -1,118 +1,84 @@
-﻿using Interfaces;
-using System.Linq;
-class Program
-{
-    class Dog : IAnimal
-    {
-        public void MakeSound()
-        {
-            Console.WriteLine("Hav-hav");
-        }
+﻿//using Enum;
+//using System.Linq;
+//class Program
+//{
+//    class Order
+//    {
+//        public string Id { get; set; }
+//        public string CustomerName { get; set; }
+//        public OrderStatus Status { get; set; }
 
-        public void Move()
-        {
-            Console.WriteLine("Dog runs");
-        }
-    }
+//        public void DisplayStatusMessage()
+//        {
+//            switch (Status)
+//            {
+//                case OrderStatus.Pending:
+//                    Console.WriteLine("Sifariş qəbul olundu, emal gözləyir.");
+//                    break;
+//                case OrderStatus.Processing:
+//                    Console.WriteLine("Sifariş hazırda emal olunur.");
+//                    break;
+//                case OrderStatus.Shipped:
+//                    Console.WriteLine("Sifariş göndərildi, yoldadır.");
+//                    break;
+//                case OrderStatus.Delivered:
+//                    Console.WriteLine("Sifariş müştəriyə çatdı.");
+//                    break;
+//                case OrderStatus.Cancelled:
+//                    Console.WriteLine("Sifariş ləğv edildi.");
+//                    break;
+//            }
+//        }
+//    }
 
-    class Bird : IAnimal
-    {
-        public void MakeSound()
-        {
-            Console.WriteLine("Cik-cik");
-        }
+//    static void Main(string[] args)
+//    {
 
-        public void Move()
-        {
-            Console.WriteLine("Bird flies");
-        }
-    }
-
-    class Car : IVehicle
-    {
-        public void Start()
-        {
-            Console.WriteLine("Car startted");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine("Car stopped");
-        }
-    }
-
-    class Employee
-    {
-        public string Name { get; set; }
-
-        private string surname;
-        public string Surname
-        {
-            get
-            {
-                return surname;
-            }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    Console.WriteLine("error");
-                    return;
-                }
-                if (!char.IsUpper(value[0]) || !value.All(char.IsLetter))
-                {
-                    Console.WriteLine("error");
-                    return;
-                }
-                surname = value;
-            }
-        }
-
-        public Employee(string name, string surname, int salary)
-        {
-            Name = name;
-            Surname = surname;
-        }
-    }
-
-    class Department
-    {
-        public string name;
-        private int EmployeeLimit;
-        private int SalaryLimit;
-        private Employee[] Employees = new Employee[10];
-        private int salary;
-        public int Salary 
-        {
-            get
-            {
-                return salary;
-            }
-            set
-            {
-                if(value < 250)
-                {
-                    Console.WriteLine("Salary 250 boyuk olmalidir");
-                    return;
-                }
-                salary = value;
-            }
-        }
-        private int employeeCount = 0;
-        internal void AddEmployee(Employee employee)
-        {
-            Employees[employeeCount] = employee;
-            employeeCount++;
-        }
-
-    }
+//    }
+//}
 
 
-    static void Main(string[] args)
-    {
-        
-    }
-}
+// 2
+
+//using System.Linq;
+//class Program
+//{
+//    abstract class MessageSender
+//    {
+//        public abstract void SendMessage();
+//    }
+
+//    class EmailSender:MessageSender
+//    {
+//        public override void SendMessage()
+//        {
+            
+//        }
+//    }
+
+
+//    static void Main(string[] args)
+//    {
+//        Console.WriteLine("1. Send message by email 2. Send message by sms 3. Quit");
+//        string menuClick = Console.ReadLine();
+
+//        if(menuClick == "1")
+//        {
+//            Console.WriteLine();
+//        }
+//        else if (menuClick == "2")
+//        {
+//            Console.WriteLine();
+//        }
+//        else if (menuClick == "3")
+//        {
+//            Console.WriteLine();
+//        }
+//    }
+//}
+
+// 3
+
 
 
 
